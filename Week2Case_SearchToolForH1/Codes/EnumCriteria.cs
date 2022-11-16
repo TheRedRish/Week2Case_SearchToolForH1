@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Week2Case_SearchToolForH1.Codes
 {
-    internal interface ISearch
+    internal enum EnumCriteria
     {
-        List<PersonModel> GetPersonsList();
+        Teacher = 1,
+        Student,
+        Subject
     }
 }
