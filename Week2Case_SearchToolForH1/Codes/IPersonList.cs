@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Week2Case_SearchToolForH1.Codes
 {
-    internal interface ISearch
+    internal interface IPersonList
     {
-        List<PersonModel> GetPersonsList();
+        public List<PersonModel> PersonList { get; set; }
+        public List<PersonModel> GetPersonsList();
     }
 }

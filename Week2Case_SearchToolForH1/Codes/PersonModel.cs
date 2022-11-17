@@ -12,10 +12,5 @@ namespace Week2Case_SearchToolForH1.Codes
         public string? Status { get; set; }
         public string[]? Subjects { get; set; }
     }
-
-    //internal interface IStatus
-    //{
-    //    string Status => "Student" || "Teacher" || "Subject";
-    //}
 }
 
