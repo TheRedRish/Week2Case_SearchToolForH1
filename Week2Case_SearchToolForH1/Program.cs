@@ -40,8 +40,10 @@ do
                 Console.WriteLine(teachers[i].Name);
             }
         }
+        Console.WriteLine();
         Console.Write("Insert the name of the teacher you want to find: ");
         string searchName = Console.ReadLine();
+        Console.WriteLine();
 
         PersonModel? personModel = Search.GetPerson(searchName);
 
@@ -80,8 +82,11 @@ do
                 Console.WriteLine(students[i].Name);
             }
         }
+        Console.WriteLine();
         Console.Write("Insert the name of the student you want to find: ");
         string searchName = Console.ReadLine();
+        Console.WriteLine();
+
         PersonModel? personModel = Search.GetPerson(searchName);
 
         //Get list with lines to print of subjects and the teachers with the given subject
@@ -97,6 +102,7 @@ do
         {
             Console.WriteLine(line);
         }
+        Console.WriteLine();
     }
     // If number for Subject or text of "Subject" is input
     else if (searchUserInput == ((int)EnumCriteria.Subject).ToString() || searchUserInput.ToLower() == EnumCriteria.Subject.ToString().ToLower())
@@ -126,8 +132,11 @@ do
                 Console.WriteLine(allSubjects[i]);
             }
         }
+        Console.WriteLine();
         Console.Write("Insert the name of the subject you want to find: ");
-        string searchSubject = Console.ReadLine().ToString();
+        string searchSubject = Console.ReadLine();
+        Console.WriteLine();
+
         List<PersonModel>? personsWithSubject = Search.GetPersonsWithSubject(searchSubject);
 
         //Get list of lines to print with Teachers and students of each subject
@@ -142,6 +151,7 @@ do
         {
             Console.WriteLine(line);
         }
+        Console.WriteLine();
     }
 
     Console.Write("Do you want to shut down the application? y/n: ");
